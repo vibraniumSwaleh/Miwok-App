@@ -23,6 +23,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -32,13 +34,42 @@ public class MainActivity extends AppCompatActivity {
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
 
-        TextView listen = (TextView)findViewById(R.id.numbers);
+        //Linking view in xml to variable in java
+        TextView listenNumbers = (TextView)findViewById(R.id.numbers);
+        TextView listenFamilyMembers = (TextView)findViewById(R.id.family);
+        TextView listenColors = (TextView)findViewById(R.id.colors);
+        TextView lisenPhrases = (TextView)findViewById(R.id.phrases);
 
-        listen.setOnClickListener(new View.OnClickListener() {
+        //Method showing a toast message when Number text view is click
+        listenNumbers.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick( View view){
-                Toast.makeText(view.getContext(), "Open the list of numbers", Toast.LENGTH_LONG).show();
+                Toast.makeText(view.getContext(), "Open the list of numbers", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Method showing a toast message when Family Members text view is click
+        listenFamilyMembers.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Toast.makeText(view.getContext(), "Open the list of family members", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Method showing a toast message when Color view text view is click
+        listenColors.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Toast.makeText(view.getContext(), "Open the list of colors", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //Method showing a toast message when phrases view text view is click
+        lisenPhrases.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Toast.makeText(view.getContext(), "Open the list of phrases", Toast.LENGTH_SHORT).show();
             }
         });
     }
