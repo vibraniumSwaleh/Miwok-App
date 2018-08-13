@@ -40,36 +40,43 @@ public class MainActivity extends AppCompatActivity {
         TextView listenColors = (TextView)findViewById(R.id.colors);
         TextView lisenPhrases = (TextView)findViewById(R.id.phrases);
 
-        //Method showing a toast message when Number text view is click
+        //Method to open Numbers Activity when view is click
         listenNumbers.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick( View view){
-                Toast.makeText(view.getContext(), "Open the list of numbers", Toast.LENGTH_SHORT).show();
+//              Toast.makeText(view.getContext(), "Open the list of numbers", Toast.LENGTH_SHORT).show();
+                Intent numbersIntents = new Intent(MainActivity.this, NumbersActivity.class);
+                startActivity(numbersIntents);
             }
         });
 
-        //Method showing a toast message when Family Members text view is click
+        //Method to open Family Members Activity when view is click
         listenFamilyMembers.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(view.getContext(), "Open the list of family members", Toast.LENGTH_SHORT).show();
+//              Toast.makeText(view.getContext(), "Open the list of family members", Toast.LENGTH_SHORT).show();
+                Intent listenFamilyMembers = new Intent(MainActivity.this, FamilyMembersActivity.class);
+                startActivity(listenFamilyMembers);
             }
         });
 
-        //Method showing a toast message when Color view text view is click
+        //Method to open Colors Activity when view is click
         listenColors.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(view.getContext(), "Open the list of colors", Toast.LENGTH_SHORT).show();
+//              Toast.makeText(view.getContext(), "Open the list of colors", Toast.LENGTH_SHORT).show();
+                Intent listenColors = new Intent(MainActivity.this, ColorsActivity.class);
+                startActivity(listenColors);
             }
         });
 
-        //Method showing a toast message when phrases view text view is click
+        //Method to open Phrases Activity when view is click
         lisenPhrases.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Toast.makeText(view.getContext(), "Open the list of phrases", Toast.LENGTH_SHORT).show();
+//              Toast.makeText(view.getContext(), "Open the list of phrases", Toast.LENGTH_SHORT).show();
+                Intent lisenPhrases = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(lisenPhrases);
             }
         });
     }
@@ -79,4 +86,6 @@ public class MainActivity extends AppCompatActivity {
 //        Intent numbersIntents = new Intent(this, NumbersActivity.class);
 //        startActivity(numbersIntents);
 //    }
+
+
 }
