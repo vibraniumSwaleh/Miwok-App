@@ -3,7 +3,10 @@ package com.example.android.miwok;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,34 +19,26 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         //Array of numbers
-        ArrayList<String> englishNumbers = new ArrayList<String>();
+        ArrayList<Word> numbersName = new ArrayList<Word>();
 
         //Assigning words to englishTranslation array
-        englishNumbers.add("one");
-        englishNumbers.add("two");
-        englishNumbers.add("three");
-        englishNumbers.add("four");
-        englishNumbers.add("five");
-        englishNumbers.add("six");
-        englishNumbers.add("seven");
-        englishNumbers.add("eight");
-        englishNumbers.add("nine");
-        englishNumbers.add("ten");
+        numbersName.add(new Word("one", "lutti"));
+        numbersName.add(new Word("two", "ottiko"));
+        numbersName.add(new Word("three", "tolookosu"));
+        numbersName.add(new Word("four", "oyyisa"));
+        numbersName.add(new Word("five", "massokka"));
+        numbersName.add(new Word("six", "temmokka"));
+        numbersName.add(new Word("seven", "kenekaku"));
+        numbersName.add(new Word("eight", "kawinta"));
+        numbersName.add(new Word("nine", "wo'e"));
+        numbersName.add(new Word("ten", "na'aacha"));
 
-        //Linking LinearLayout to java using id
-        LinearLayout rootView = (LinearLayout)findViewById(R.id.rootView);
 
-        int index = 0;
+        WordAdapter itemsAdapter = new WordAdapter(this, numbersName);
 
-        while (index<englishNumbers.size()){
-            //creating new texview
-            TextView wordView = new TextView(this);
-            //setting text in the wordView TextView
-            wordView.setText(englishNumbers.get(index));
-            //displaying wordView TextView in the parent rootView Layout
-            rootView.addView(wordView);
-            index++;
-        }
+        ListView listView = (ListView) findViewById(R.id.numberslist);
+
+        listView.setAdapter(itemsAdapter);
 
     }
 }
