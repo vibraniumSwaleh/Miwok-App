@@ -14,22 +14,22 @@ public class FamilyMembersActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         //Array of family members
-        ArrayList<Word> familyMembersName = new ArrayList<Word>();
+        ArrayList<Word> words = new ArrayList<Word>();
 
         //Assigning words to englishTranslation array
-        familyMembersName.add(new Word("father", "әpә"));
-        familyMembersName.add(new Word("mother", "әṭa"));
-        familyMembersName.add(new Word("son", "angsi"));
-        familyMembersName.add(new Word("daughter", "tune"));
-        familyMembersName.add(new Word("older brother", "taachi"));
-        familyMembersName.add(new Word("younger brother", "chalitti"));
-        familyMembersName.add(new Word("older sister", "teṭe"));
-        familyMembersName.add(new Word("younger sister", "kolliti"));
-        familyMembersName.add(new Word("grandmother", "ama"));
-        familyMembersName.add(new Word("grandfather", "paapa"));
+        words.add(new Word("father", "әpә"));
+        words.add(new Word("mother", "әṭa"));
+        words.add(new Word("son", "angsi"));
+        words.add(new Word("daughter", "tune"));
+        words.add(new Word("older brother", "taachi"));
+        words.add(new Word("younger brother", "chalitti"));
+        words.add(new Word("older sister", "teṭe"));
+        words.add(new Word("younger sister", "kolliti"));
+        words.add(new Word("grandmother", "ama"));
+        words.add(new Word("grandfather", "paapa"));
 
 
-        FamilyMemberAdapter itemsAdapter = new FamilyMemberAdapter(this, familyMembersName);
+        WordAdapter itemsAdapter = new WordAdapter(this, words);
 
         ListView listView = (ListView) findViewById(R.id.wordlist);
 

@@ -14,22 +14,22 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         //Array of numbers
-        ArrayList<Word> numbersName = new ArrayList<Word>();
+        ArrayList<Word> words = new ArrayList<Word>();
 
         //Assigning words to englishTranslation array
-        numbersName.add(new Word("one", "lutti"));
-        numbersName.add(new Word("two", "ottiko"));
-        numbersName.add(new Word("three", "tolookosu"));
-        numbersName.add(new Word("four", "oyyisa"));
-        numbersName.add(new Word("five", "massokka"));
-        numbersName.add(new Word("six", "temmokka"));
-        numbersName.add(new Word("seven", "kenekaku"));
-        numbersName.add(new Word("eight", "kawinta"));
-        numbersName.add(new Word("nine", "wo'e"));
-        numbersName.add(new Word("ten", "na'aacha"));
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("two", "ottiko"));
+        words.add(new Word("three", "tolookosu"));
+        words.add(new Word("four", "oyyisa"));
+        words.add(new Word("five", "massokka"));
+        words.add(new Word("six", "temmokka"));
+        words.add(new Word("seven", "kenekaku"));
+        words.add(new Word("eight", "kawinta"));
+        words.add(new Word("nine", "wo'e"));
+        words.add(new Word("ten", "na'aacha"));
 
 
-        WordAdapter itemsAdapter = new WordAdapter(this, numbersName);
+        WordAdapter itemsAdapter = new WordAdapter(this, words);
 
         ListView listView = (ListView) findViewById(R.id.wordlist);
 

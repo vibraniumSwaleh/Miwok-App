@@ -14,22 +14,22 @@ public class PhrasesActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         //Array of phrases
-        ArrayList<Word> phrasesName = new ArrayList<Word>();
+        ArrayList<Word> words = new ArrayList<Word>();
 
         //Assigning words to englishTranslation array
-        phrasesName.add(new Word("Where are you going?", "minto wuksus"));
-        phrasesName.add(new Word("What is your name?", "tinnә oyaase'nә"));
-        phrasesName.add(new Word("My name is...", "oyaaset..."));
-        phrasesName.add(new Word("How are you feeling?", "michәksәs?"));
-        phrasesName.add(new Word("I’m feeling good.", "kuchi achit"));
-        phrasesName.add(new Word("Are you coming?", "әәnәs'aa?"));
-        phrasesName.add(new Word("Yes, I’m coming.", "hәә’ әәnәm"));
-        phrasesName.add(new Word("I’m coming.", "әәnәm"));
-        phrasesName.add(new Word("Let’s go.", "yoowutis"));
-        phrasesName.add(new Word("Come here.", "әnni'nem"));
+        words.add(new Word("Where are you going?", "minto wuksus"));
+        words.add(new Word("What is your name?", "tinnә oyaase'nә"));
+        words.add(new Word("My name is...", "oyaaset..."));
+        words.add(new Word("How are you feeling?", "michәksәs?"));
+        words.add(new Word("I’m feeling good.", "kuchi achit"));
+        words.add(new Word("Are you coming?", "әәnәs'aa?"));
+        words.add(new Word("Yes, I’m coming.", "hәә’ әәnәm"));
+        words.add(new Word("I’m coming.", "әәnәm"));
+        words.add(new Word("Let’s go.", "yoowutis"));
+        words.add(new Word("Come here.", "әnni'nem"));
 
 
-        PhrasesAdapter itemsAdapter = new PhrasesAdapter(this, phrasesName);
+        WordAdapter itemsAdapter = new WordAdapter(this, words);
 
         ListView listView = (ListView) findViewById(R.id.wordlist);
 

@@ -14,19 +14,19 @@ public class ColorsActivity extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         //Array of colors
-        ArrayList<Word> colorsName = new ArrayList<Word>();
+        ArrayList<Word> words = new ArrayList<Word>();
 
         //Assigning words to englishTranslation array
-        colorsName.add(new Word("red", "weṭeṭṭi"));
-        colorsName.add(new Word("green", "chokokki"));
-        colorsName.add(new Word("brown", "ṭakaakki"));
-        colorsName.add(new Word("gray", "ṭopoppi"));
-        colorsName.add(new Word("black", "kululli"));
-        colorsName.add(new Word("white", "kelelli"));
-        colorsName.add(new Word("dusty yellow", "ṭopiisә"));
-        colorsName.add(new Word("mustard yellow", "chiwiiṭә"));
+        words.add(new Word("red", "weṭeṭṭi"));
+        words.add(new Word("green", "chokokki"));
+        words.add(new Word("brown", "ṭakaakki"));
+        words.add(new Word("gray", "ṭopoppi"));
+        words.add(new Word("black", "kululli"));
+        words.add(new Word("white", "kelelli"));
+        words.add(new Word("dusty yellow", "ṭopiisә"));
+        words.add(new Word("mustard yellow", "chiwiiṭә"));
 
-        ColorAdapter itemsAdapter = new ColorAdapter(this, colorsName);
+        WordAdapter itemsAdapter = new WordAdapter(this, words);
 
         ListView listView = (ListView) findViewById(R.id.wordlist);
 
