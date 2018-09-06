@@ -81,11 +81,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-//    //Method to open Numbers Activity
-//    public void openNumbersList(View view){
-//        Intent numbersIntents = new Intent(this, NumbersActivity.class);
-//        startActivity(numbersIntents);
-//    }
-
-
 }
