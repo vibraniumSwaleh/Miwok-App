@@ -7,6 +7,7 @@ public class Word {
     private String mMiwokTranslation;
     private int mImageResourceId = NO_IMAGE;
     private static final int NO_IMAGE = -1;
+    private int mRawResourceId;
 
     //Word constructor with two parameters
     public Word(String defaultTranslation, String miwokTranslation){
@@ -19,6 +20,14 @@ public class Word {
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
         mImageResourceId = imageResourceId;
+    }
+
+    //word constructor with three parameters
+    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId, int rawResourceId){
+        mDefaultTranslation = defaultTranslation;
+        mMiwokTranslation = miwokTranslation;
+        mImageResourceId = imageResourceId;
+        mRawResourceId = rawResourceId;
     }
 
     //return english translation
@@ -37,5 +46,10 @@ public class Word {
     //return true if Image is present and false if image is absent
     public boolean hasImage(){
         return mImageResourceId != NO_IMAGE;
+    }
+
+    //return audio sound
+    public int getRawAudioSound(){
+        return mRawResourceId;
     }
 }
