@@ -9,17 +9,11 @@ public class Word {
     private static final int NO_IMAGE = -1;
     private int mRawResourceId;
 
-    //Word constructor with two parameters
-    public Word(String defaultTranslation, String miwokTranslation){
+//    //Word constructor with two parameters
+    public Word(String defaultTranslation, String miwokTranslation, int rawResourceId){
         mDefaultTranslation = defaultTranslation;
         mMiwokTranslation = miwokTranslation;
-    }
-
-    //word constructor with three parameters
-    public Word(String defaultTranslation, String miwokTranslation, int imageResourceId){
-        mDefaultTranslation = defaultTranslation;
-        mMiwokTranslation = miwokTranslation;
-        mImageResourceId = imageResourceId;
+        mRawResourceId = rawResourceId;
     }
 
     //word constructor with three parameters
@@ -29,6 +23,7 @@ public class Word {
         mImageResourceId = imageResourceId;
         mRawResourceId = rawResourceId;
     }
+
 
     //return english translation
     public String getDefaultTranslation(){
@@ -51,5 +46,15 @@ public class Word {
     //return audio sound
     public int getRawAudioSound(){
         return mRawResourceId;
+    }
+
+    @Override
+    public String toString() {
+        return "Word{" +
+                "mDefaultTranslation='" + mDefaultTranslation + '\'' +
+                ", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+                ", mImageResourceId=" + mImageResourceId +
+                ", mRawResourceId=" + mRawResourceId +
+                '}';
     }
 }

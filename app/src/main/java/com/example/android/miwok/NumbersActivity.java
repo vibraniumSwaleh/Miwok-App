@@ -3,9 +3,11 @@ package com.example.android.miwok;
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -45,6 +47,12 @@ public class NumbersActivity extends AppCompatActivity {
                 Word itemClicked = words.get(i);
                 soundMedia = MediaPlayer.create(NumbersActivity.this, itemClicked.getRawAudioSound());
                 soundMedia.start();
+                soundMedia.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mediaPlayer) {
+                        Toast.makeText(NumbersActivity.this, "I'm done", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
 
