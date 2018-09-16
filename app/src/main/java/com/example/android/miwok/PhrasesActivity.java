@@ -42,6 +42,7 @@ public class PhrasesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
+
         //Creating Audio Manger object
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
