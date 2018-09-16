@@ -17,7 +17,7 @@ public class FamilyMembersActivity extends AppCompatActivity {
     private MediaPlayer.OnCompletionListener mComleptionListener = new MediaPlayer.OnCompletionListener() {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
-            recreate();
+            releaseMediaPlayer();
         }
     };
 
